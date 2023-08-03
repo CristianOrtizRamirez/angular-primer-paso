@@ -2,9 +2,19 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'bases';
+
+  public title: string = 'Hola Mundo';
+  public counter: number = 10;
+
+  incrementar(valor: number):void {
+    this.counter += valor;
+  }
+
+  resetear():void {
+    this.counter=10;
+  }
+
 }
